@@ -1,0 +1,91 @@
+{
+	"info": {
+		"_postman_id": "fc36b69a-0d55-4abe-8a93-4ab4aa8271ed",
+		"name": "Blockchain Data Store",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "38671794"
+	},
+	"item": [
+		{
+			"name": "Save Data",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Mansi\",\n    \"email\": \"mansi@test.com\",\n    \"data\": \"data\",\n    \"userType\": \"admin\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/data/save",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"data",
+						"save"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Fetch All Data",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/data/fetchAll",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"data",
+						"fetchAll"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Fetch Data by filter",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userType\": \"admin\",\n    \"name\": \"Mansi\",\n    \"email\": \"mansi@test.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/data/fetchByFilter",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"data",
+						"fetchByFilter"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
